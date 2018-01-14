@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="zz.jsict.com.sortandlocktableview.MainActivity">
+
+    <!--整张表的第一格，独立存在，永远不移动-->
+    <TextView
+        android:id="@+id/firstElement"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:background="@color/green"
+        android:gravity="center" />
+    <!--被锁定的第一行-->
+    <zz.jsict.com.sortandlocktableview.CustomHorizontalScrollView
+        android:id="@+id/firstLockedRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/firstElement"
+        android:layout_toRightOf="@+id/firstElement" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/firstElement" />
+    <!--分割线-->
+    <View
+        android:id="@+id/line"
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="@color/greyLine"
+        android:layout_toEndOf="@+id/firstElement"
+        android:layout_toRightOf="@+id/firstElement"
+        android:layout_alignBottom="@+id/main"/>
+</RelativeLayout>

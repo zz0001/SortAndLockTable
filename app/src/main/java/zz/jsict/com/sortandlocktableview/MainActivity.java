@@ -148,6 +148,14 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
+    private void generateTableDirectly(){
+        
+    }
+
+
+
+
     class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
         @Override
